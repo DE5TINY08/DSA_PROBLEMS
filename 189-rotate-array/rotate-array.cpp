@@ -5,7 +5,10 @@ public:
         k = k % n;
         if(k>0){
             vector<int> temp = nums;
-            for(int i=0;i<n;i++){
+            for(int i=0;i+k<n;i++){
+                nums[i+k] = temp[i];
+            }
+            for(int i=n-k;i<n;i++){
                 nums[(i+k)%n] = temp[i];
             }
         }
