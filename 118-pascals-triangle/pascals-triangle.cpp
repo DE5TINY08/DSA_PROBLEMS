@@ -12,11 +12,10 @@ public:
     vector<vector<int>> generate(int numRows) {
         vector<vector<int>> t(numRows) ;
         for(int i = 0;i< numRows;i++){
-            vector<int> ans(i+1);
+            t[i].resize(i + 1, 1);
             for(int j = 0;j<=i;j++){
-                ans[j] = ncr(i,j);
+                t[i][j] = ncr(i,j);
             }
-            t[i] = ans;
         }
         return t;
     }
