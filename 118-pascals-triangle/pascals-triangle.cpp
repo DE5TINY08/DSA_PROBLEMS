@@ -10,13 +10,13 @@ public:
         return ans;
     }
     vector<vector<int>> generate(int numRows) {
-        vector<vector<int>> t ;
+        vector<vector<int>> t(numRows) ;
         for(int i = 0;i< numRows;i++){
-            vector<int> ans;
+            vector<int> ans(i+1);
             for(int j = 0;j<=i;j++){
-                ans.push_back(ncr(i,j));
+                ans[j] = ncr(i,j);
             }
-            t.push_back(ans);
+            t[i] = ans;
         }
         return t;
     }
