@@ -14,15 +14,9 @@ public:
                 c1 = 1;
                 maj1 = i;
             }
-            else if(i == maj1){
-                c1++;
-            }
             else if(c2 == 0 ){
                 c2 = 1;
                 maj2 = i;
-            }
-            else if(i == maj2){
-                c2++;
             }
             else{
                 c1--;
