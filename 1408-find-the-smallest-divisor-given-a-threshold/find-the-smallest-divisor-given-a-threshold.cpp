@@ -5,7 +5,6 @@ public:
         for(int i = 0;i<nums.size();i++){
                 high = max(high , nums[i]);
             }
-        int ans = high;
         while(high>=low){
             mid = low + (high-low)/2;
             int sum =0;
@@ -17,9 +16,8 @@ public:
             }
             else{
                 high = mid -1;
-                ans = min(ans,mid);
             }
         }
-        return ans;
+        return low;
     }
 };
