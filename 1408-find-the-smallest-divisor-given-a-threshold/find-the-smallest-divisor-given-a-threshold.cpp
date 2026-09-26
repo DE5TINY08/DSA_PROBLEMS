@@ -10,12 +10,7 @@ public:
             mid = low + (high-low)/2;
             int sum =0;
             for(int i = 0;i<nums.size();i++){
-                if(nums[i]%mid != 0){
-                    sum += nums[i]/mid + 1;
-                }
-                else{
-                    sum += nums[i]/mid;
-                }
+                sum += (nums[i] + mid - 1) / mid;
             }
             if (sum > threshold){
                 low = mid + 1;
