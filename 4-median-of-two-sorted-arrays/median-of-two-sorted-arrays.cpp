@@ -11,7 +11,6 @@ public:
             int in = target - mid;
             int l1 = (mid == 0) ? INT_MIN : nums1[mid - 1];
             int r1 = (mid == m) ? INT_MAX : nums1[mid];
-            
             int l2 = (in == 0) ? INT_MIN : nums2[in - 1];
             int r2 = (in == n) ? INT_MAX : nums2[in];
             if (l1 <= r2 && l2 <= r1) {
